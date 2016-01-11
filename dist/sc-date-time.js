@@ -25,7 +25,7 @@
   now: "Now",
   cancel: "Cancel",
   save: "Save",
-  weekdays: ['S', 'S', 'M', 'T', 'W', 'T', 'F'],
+  weekdays: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
   switchTo: 'Switch to',
   clock: 'Clock',
   calendar: 'Calendar'

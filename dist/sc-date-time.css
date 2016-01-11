@@ -1,5 +1,5 @@
 /*
-  @license sc-date-time
+  @license md-date-time
   @author SimeonC
   @license 2015 MIT
   @version 0.1.0
@@ -64,14 +64,21 @@
   color: rgba(255,255,255,0.5);
 }
 .time-date > .control {
+  height: 400px;
   width: 53%;
   overflow-x: hidden;
   position: relative;
 }
+@media (max-width: 51rem){
+  .time-date.full-mode > .control {
+    width: 100%;
+    height: 44.2rem;
+  }
+}
 .time-date > .control > .full-title {
   display: none;
-  background-color: #00796b;
-  color: #e1e1e1;
+  background-color: #FFA726;
+  color: #ffffff;
   line-height: 2.4rem;
 }
 .time-date > .control > .slider {
@@ -157,7 +164,7 @@
   border-radius: 3rem;
 }
 .time-date > .control > .slider > .date-control > .days {
-  margin-top: 22px;
+  margin-top: 25px;
   font-size: 1rem;
   padding-left: 1.5rem;
   width: 20.790000000000003rem;
@@ -166,19 +173,19 @@
   color: #202020;
 }
 .time-date > .control > .slider > .date-control > .days .day-cell.today {
-  color: #009688;
+  color: #E65100;
 }
 .time-date > .control > .slider > .date-control > .days .day-cell.selected {
   color: #fff;
-  background-color: #009688;
+  background-color: #FFA726;
 }
 .time-date > .control > .slider > .date-control > .days .day-cell:hover,
 .time-date > .control > .slider > .date-control > .days .day-cell:active {
-  color: #e6e6e6;
-  background-color: #00baa9;
+  color: #E65100;
+  background-color: #FFE0B2;
 }
 .time-date > .control > .slider > .date-control > .days .day-cell:disabled {
-  color: #aaa;
+  color: #E65100;
   background-color: none;
 }
 .time-date > .control > .slider > .time-control {
@@ -285,7 +292,7 @@
 }
 .time-date button,
 .time-date .button {
-  color: #009688;
+  color: #FFA726;
 }
 .time-date.full-mode > .display {
   display: none;
@@ -376,6 +383,7 @@
     position: relative;
     width: 100%;
     top: 0px;
+    background-color: #FFA726;
     height: 15.5rem;
   }
   .time-date > .control {
