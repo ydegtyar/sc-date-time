@@ -25,7 +25,7 @@
   now: "Now",
   cancel: "Cancel",
   save: "Save",
-  weekdays: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+  weekdays: ['S', 'S', 'M', 'T', 'W', 'T', 'F'],
   switchTo: 'Switch to',
   clock: 'Clock',
   calendar: 'Calendar'
@@ -209,7 +209,7 @@
               return results;
             })(),
             offsetMargin: function() {
-              return (new Date(this._year, this._month).getDay() * 2.7) + "rem";
+              return (new Date(this._year, this._month).getDay() * 2.7) - 2.7 + "rem";
             },
             isVisible: function(d) {
               return new Date(this._year, this._month, d).getMonth() === this._month;

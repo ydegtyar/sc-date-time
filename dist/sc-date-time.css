@@ -1,10 +1,10 @@
 /*
-	@license sc-date-time
-	@author SimeonC
-	@license 2015 MIT
-	@version 1.1.6
-	
-	See README.md for requirements and use.
+  @license sc-date-time
+  @author SimeonC
+  @license 2015 MIT
+  @version 0.1.0
+  
+  See README.md for requirements and use.
 *//* Start Variable Declaration */
 /* End Variable Declaration */
 /* Start Main Styling */
@@ -17,49 +17,12 @@
   width: 46.1rem;
   font-size: 1.2rem;
 }
-.time-date[theme=bootstrap] .btn {
-  outline: 0;
-  line-height: 2.4rem;
-  text-transform: uppercase;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-weight: inherit;
-  font-size: inherit;
-}
-.time-date[theme=bootstrap] > .control > .slider > .date-control > .days > .day-cell {
-  line-height: 2.3rem;
-  border-radius: 3px;
-  text-decoration: none;
-}
-.time-date[theme=bootstrap] > .control > .slider > .date-control > .days > .day-cell:hover {
-  text-decoration: none;
-}
-.time-date[theme=bootstrap] > .control > .slider > .date-control > .days > .day-cell.today {
-  position: relative;
-}
-.time-date[theme=bootstrap] > .control > .slider > .date-control > .days > .day-cell.today::after {
-  content: " ";
-  position: absolute;
-  bottom: 0.2rem;
-  right: 0.2rem;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 0.5rem 0.5rem;
-  border-color: transparent transparent currentColor transparent;
-}
-.time-date[theme=material] .md-button,
-.time-date:not([theme]) .md-button {
+.time-date .md-button {
   padding: 6px;
   margin: 0;
-  min-width: auto;
   min-width: initial;
   line-height: inherit;
   font-size: inherit;
-}
-.time-date[theme=material] > .control > .slider > .date-control .day-cell,
-.time-date:not([theme]) > .control > .slider > .date-control .day-cell {
-  border-radius: 3rem;
 }
 .time-date > .display {
   position: relative;
@@ -70,7 +33,7 @@
           transition: color 0.6s ease-in-out;
 }
 .time-date > .display > .title {
-  background-color: #00796b;
+  background-color: #795548;
   color: #e1e1e1;
   line-height: 2.5rem;
 }
@@ -173,6 +136,7 @@
   width: 4.3rem;
 }
 .time-date > .control > .slider > .date-control > .headers {
+  margin-top: -0.7rem;
   font-weight: 500;
   font-size: 1rem;
   padding-left: 1.5rem;
@@ -183,19 +147,17 @@
   text-align: center;
   cursor: default;
   box-sizing: border-box;
-  padding-bottom: 0;
-  height: 2rem;
 }
 .time-date > .control > .slider > .date-control .day-cell {
   float: left;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 0.1rem;
-  padding: 0;
+  width: 2.7rem;
+  height: 2.7rem;
+  padding: 0.7rem 6px 6px 6px;
   cursor: pointer;
-  font-size: 1.3rem;
+  border-radius: 3rem;
 }
 .time-date > .control > .slider > .date-control > .days {
+  margin-top: 22px;
   font-size: 1rem;
   padding-left: 1.5rem;
   width: 20.790000000000003rem;
@@ -230,8 +192,7 @@
   left: 0;
   right: 0;
 }
-.time-date > .control > .slider > .time-control > .time-inputs > .hours,
-.time-date > .control > .slider > .time-control > .time-inputs > .minutes {
+.time-date > .control > .slider > .time-control > .time-inputs > button.md-button {
   font-size: 3rem;
   line-height: 1rem;
   width: 8.4rem;
@@ -240,29 +201,25 @@
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.time-date > .control > .slider > .time-control > .time-inputs > .hours.hours,
-.time-date > .control > .slider > .time-control > .time-inputs > .minutes.hours {
+.time-date > .control > .slider > .time-control > .time-inputs > button.md-button.hours {
   left: 1.5rem;
   right: 50%;
   margin-right: 1rem;
 }
-.time-date > .control > .slider > .time-control > .time-inputs > .hours.minutes,
-.time-date > .control > .slider > .time-control > .time-inputs > .minutes.minutes {
+.time-date > .control > .slider > .time-control > .time-inputs > button.md-button.minutes {
   right: 0.7rem;
   left: 50%;
 }
-.time-date > .control > .slider > .time-control > .time-inputs > .hours.up,
-.time-date > .control > .slider > .time-control > .time-inputs > .minutes.up {
+.time-date > .control > .slider > .time-control > .time-inputs > button.md-button.up {
   top: -2.3rem;
 }
-.time-date > .control > .slider > .time-control > .time-inputs > .hours.down,
-.time-date > .control > .slider > .time-control > .time-inputs > .minutes.down {
+.time-date > .control > .slider > .time-control > .time-inputs > button.md-button.down {
   bottom: -3rem;
 }
 .time-date > .control > .slider > .time-control > .time-inputs > input {
   border: none;
   border-bottom: 1px solid #000;
-  text-align: center;
+  text-align: right;
   font-size: 6.1rem;
   line-height: 3rem;
   width: 8.4rem;
@@ -352,24 +309,11 @@
   display: none;
 }
 .time-date.full-mode > .buttons {
-  background-color: #009688;
+  background-color: #FFA726;
 }
 .time-date.full-mode > .buttons > button {
 /* Invert colours for bottom bar */
   color: #fff !important;
-}
-.time-date:not(.full-mode).compact {
-  width: 22.8rem;
-}
-.time-date:not(.full-mode).compact > .display {
-  display: none;
-}
-.time-date:not(.full-mode).compact > .control {
-  width: 100%;
-  height: 23.2rem;
-}
-.time-date:not(.full-mode).compact > .control > .full-title {
-  display: block;
 }
 .time-date.vertical {
   width: 23.1rem;
@@ -466,4 +410,9 @@
     width: 100%;
     float: left;
   }
+}
+.time-inputs input[type=number]::-webkit-inner-spin-button, 
+.time-inputs input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
